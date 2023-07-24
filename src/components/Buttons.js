@@ -1,12 +1,9 @@
 import satData from "./satData";
-//import displaySats from "../App";
-import filterByType from "../App";
-import setSat from "../App";
 
-function Buttons(props) {
+function Buttons({filterByType, setSat, displaySats}) {
   return (
 <div>
-  {(props.displaySats).map((sat, id) => (
+  {(displaySats).map((sat, id) => (
         <button onClick={() => filterByType(sat)} key={id}>
           {sat} Orbit
         </button>
